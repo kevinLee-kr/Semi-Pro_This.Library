@@ -1,0 +1,111 @@
+DROP TABLE SERVICE_CENTER;
+CREATE TABLE SERVICE_CENTER
+(
+    INQUIRY_NO NUMBER CONSTRAINT INQUIRY_NO_PK PRIMARY KEY,
+    MEM_NO NUMBER,
+    CONTENT VARCHAR2(3000) CONSTRAINT CONTENT_NN NOT NULL,
+    STATUS CHAR(1) NOT NULL,
+    INQUIRY_DATE DATE,
+    ANSWER VARCHAR2(3000),
+    ANSWER_DATE DATE DEFAULT SYSDATE,
+
+    CONSTRAINT MEM_NO_FK FOREIGN KEY(MEM_NO)
+    REFERENCES MEMBER(MEM_NO)
+    
+    );
+    COMMENT ON COLUMN SERVICE_CENTER.INQUIRY_NO IS '문의번호';
+    COMMENT ON COLUMN SERVICE_CENTER.MEM_NO IS '유저번호';
+    COMMENT ON COLUMN SERVICE_CENTER.CONTENT IS '내용';
+    COMMENT ON COLUMN SERVICE_CENTER.STATUS IS '상태';
+    COMMENT ON COLUMN SERVICE_CENTER.INQUIRY_DATE IS '작성날짜';
+    COMMENT ON COLUMN SERVICE_CENTER.ANSWER IS '답변내용';
+    COMMENT ON COLUMN SERVICE_CENTER.ANSWER_DATE IS '답변날짜';
+
+CREATE SEQUENCE SERVICE_CENTER_SEQ
+                INCREMENT BY    1 
+                START WITH      1
+                MINVALUE        1
+                MAXVALUE        99999
+                NOCYCLE
+                NOCACHE
+                NOORDER;
+INSERT INTO SERVICE_CENTER(
+                INQUIRY_NO,
+                MEM_NO,
+                CONTENT,
+                STATUS,
+                INQUIRY_DATE,
+                ANSWER,
+                ANSWER_DATE)
+            VALUES(SERVICE_CENTER_SEQ.NEXTVAL
+                    , 7
+                    , '날씨도 끈적하고 너무 힘들어요.'
+                    , 'Y'
+                    , SYSDATE
+                    , '그랬군요, 집에서 시원한 에어컨 바람을 쐬는건 어떨까요?'
+                    , SYSDATE
+                    );  
+INSERT INTO SERVICE_CENTER(
+                INQUIRY_NO,
+                MEM_NO,
+                CONTENT,
+                STATUS,
+                INQUIRY_DATE,
+                ANSWER,
+                ANSWER_DATE)
+            VALUES(SERVICE_CENTER_SEQ.NEXTVAL
+                    , 8
+                    , '홈페이지가 왜 안열릴까요'
+                    , 'Y'
+                    , SYSDATE
+                    , '그랬군요, 인터넷을 한번더 확인해 주시고 접속을 시도해보시겠어요?'
+                    , SYSDATE
+                    );
+INSERT INTO SERVICE_CENTER(
+                INQUIRY_NO,
+                MEM_NO,
+                CONTENT,
+                STATUS,
+                INQUIRY_DATE,
+                ANSWER,
+                ANSWER_DATE)
+            VALUES(SERVICE_CENTER_SEQ.NEXTVAL
+                    , 9
+                    , '내가 읽고 싶은 책이 없어요'
+                    , 'Y'
+                    , SYSDATE
+                    , '그랬군요, 어떤 책을 원하시는지 적어주시면 잘 찾아볼게요'
+                    , SYSDATE
+                    ); 
+INSERT INTO SERVICE_CENTER(
+                INQUIRY_NO,
+                MEM_NO,
+                CONTENT,
+                STATUS,
+                INQUIRY_DATE,
+                ANSWER,
+                ANSWER_DATE)
+            VALUES(SERVICE_CENTER_SEQ.NEXTVAL
+                    , 10
+                    , '배고픈데 메뉴좀 추천해줘요'
+                    , 'Y'
+                    , SYSDATE
+                    , '그랬군요, 날씨도 쌀쌀한데 우동 어떠신가요? 덤으로 마음이 따뜻해지는 책도 읽어보세요!'
+                    , SYSDATE
+                    );                     
+INSERT INTO SERVICE_CENTER(
+                INQUIRY_NO,
+                MEM_NO,
+                CONTENT,
+                STATUS,
+                INQUIRY_DATE,
+                ANSWER,
+                ANSWER_DATE)
+            VALUES(SERVICE_CENTER_SEQ.NEXTVAL
+                    , 11
+                    , '방 청소좀 해주세요'
+                    , 'Y'
+                    , SYSDATE
+                    , '그랬군요, 직접 해보는건 어떨까요?'
+                    , SYSDATE
+                    ); 

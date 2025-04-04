@@ -1,0 +1,194 @@
+#content>div{height: 100%;float: left;}
+
+      #content_1{width: 40%;height: 100%;}
+      #content_2{width: 20%;height: 100%}
+      #content_3{width: 40%;height: 100%}
+
+      
+ /* -------------------------------------------------------- */
+
+      #content_1_1{width: 100%; height: 22%; position: relative;}
+      #content_1_2{width: 100%; height: 41%; position: relative;}
+      #content_1_3{width: 100%; height: 37%; position: relative;}
+
+      #content_1_2_1{width: 100%; height: 79%; position: relative;}
+      #content_1_2_2{width: 100%; height: 21%; position: relative;}
+
+      #content_1_3_1{width: 100%; height: 20%; position: relative;}
+      #content_1_3_2{width: 100%; height: 80%; position: relative;}
+      
+ /* -------------------------------------------------------- */
+      #content_2_1{width: 100%; height: 8%;}
+      #content_2_2{width: 100%; height: 8%; position: relative;}
+      #content_2_3{width: 100%; height: 38.5%; position: relative;}
+      #content_2_4{width: 100%; height: 8%; position: relative;}
+      #content_2_5{width: 100%; height: 37.5%; }
+
+      #content_2_5_1{width: 100%; height: 20%; position: relative;}
+      #content_2_5_2{width: 100%; height: 80%; position: relative;}
+      
+ /* -------------------------------------------------------- */
+      #content_3_1{width: 100%; height: 22%; position: relative;}
+      #content_3_2{width: 100%; height: 41%; position: relative;}
+      #content_3_3{width: 100%; height: 37%; position: relative;}
+
+      #content_3_2_1{width: 100%; height: 79%; position: relative;}
+      #content_3_2_2{width: 100%; height: 21%; position: relative;}
+
+      #content_3_3_1{width: 100%; height: 20%; position: relative;}
+      #content_3_3_2{width: 100%; height: 80%; position: relative;}
+/* -------------------------------------------------------- */
+  
+      .pick-button{
+            width: 100%;
+            border-radius: 300%;
+      }
+
+/* -------------------------------------------------------- */  
+
+      #content_1_1>#silver {
+            position: absolute;
+            margin-right: 35%;
+            right: 0; 
+            bottom: 7%; 
+            height: 23%;
+        }
+        #content_1_2_1>#book1 {
+            position: absolute;
+            margin-top: 1%;
+            margin-right: 22%;
+            right: 0; 
+            bottom: 0;
+            top: 0;
+            height: 100%;
+            width: 35%;
+        }
+        #content_1_3_2>#book2 {
+            position: absolute;
+            margin-top: 5%;
+            margin-right: 22%;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            height: 100%;
+            width: 35%;
+        }
+/* -------------------------------------------------------- */
+      
+      #content_2_2>#gold{
+            width: 15%; height: 70%; 
+            margin-top: 6%;
+      }
+
+      #content_2_3>#book3{
+            position: absolute;
+            margin-left: 15%;
+            margin-top: 5%;
+      }
+
+      #content_2_4>button{
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+      }
+
+      #content_2_5_2>#book4{
+            position: absolute;
+            margin-top: 8%;
+            margin-left: 20%;
+            height: 100%;
+            
+      }
+/* -------------------------------------------------------- */
+      #content_3_1>#brown {
+            position: absolute;
+            margin-right: 57%;
+            right: 0; 
+            bottom: 0;
+            height: 23%;
+      }
+      #content_3_2_1>#book5 {
+          position: absolute;
+          margin-top: 2%;
+          margin-right: 43%;
+          right: 0; 
+          bottom: 0;
+          top: 0;
+          height: 95%;
+          width: 35%;
+      }
+      #content_3_3_2>#book6 { 
+          position: absolute;
+          margin-top: 5%;
+          margin-right: 43%;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          height: 100%;
+          width: 35%;
+      }
+      
+/* -------------------------------------------------------- */
+
+      #content_1_2>img{height: 90%; display: block;}
+      #content_1_3>img{width: 28%; height: 100%; display: block;}
+        
+      #content_2_2>img{height: 90%; margin: auto; display: block;}
+      #content_2_3>img{height: 90%; margin: auto; display: block;}
+      #content_2_5>img{height: 100%; margin: auto; display: block;}
+
+      #content_3_1>img{height: 23%;}
+      #content_3_2>img{height: 90%; display: block;}
+      #content_3_3>img{height: 98%; display: block;}
+
+      /* ---------------------------------------- */
+      .today-pick-container {
+            display: flex;
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center; /* 세로 중앙 정렬 (필요할 경우) */
+            height: 100%; /* 부모 요소 높이를 100%로 설정 */
+        }
+        
+        
+          .pick-button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4A4A4A;
+            background-color: #f8f9fa;
+            border: 2px solid #4A4A4A;
+            border-radius: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+        
+          .pick-button:hover {
+            background-color: #4A4A4A;
+            color: white;
+          }
+        
+          .book-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+          }
+        
+          .book-item {
+            text-align: center;
+          }
+        
+          .book-item img {
+            width: 120px;
+            height: 180px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+          }
+        
+          .book-item p {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+          }

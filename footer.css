@@ -1,0 +1,63 @@
+
+
+#footer_1{width: 100%;height: 65%;}
+#footer_1>div{float: left;}
+
+#footer_2{width: 100%;height: 35%;}
+
+#footer_1_1{height: 100%; width: 20%;position: relative;}
+#footer_1_2{height: 100%; width: 80%; position: relative;}
+#footer_2{position: relative;}
+
+#footer_1_1>img{
+    position: absolute;
+    width: 60%; 
+    height: 60%; 
+    margin-top: 20%;
+}
+
+.navigator{position: relative;}
+
+.navigator{
+    position: relative; 
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: space-around; /* 요소 간격 균등 배분 */
+}
+.navigator>a{
+    text-decoration: none; /* 밑줄 제거 */
+    color: black; /* 글씨 색상 (원하는 색으로 변경 가능) */
+    font-size: 13px; /* 글씨 크기 조절 */
+    margin-top: 6%;
+}
+
+#footer_2{
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

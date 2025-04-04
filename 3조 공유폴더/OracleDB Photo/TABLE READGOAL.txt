@@ -1,0 +1,26 @@
+DROP TABLE READGOAL;
+CREATE TABLE READGOAL
+(   RG_NO NUMBER PRIMARY KEY,
+    MEM_NO NUMBER NOT NULL ,
+    RG_BOOK NUMBER NOT NULL,  
+    RG_START DATE,
+    RG_END DATE,
+    
+    CONSTRAINT READGOAL_FK FOREIGN KEY(MEM_NO)
+    REFERENCES MEMBER(MEM_NO)
+    );
+    COMMENT ON COLUMN READGOAL.RG_NO IS '목표설정식별번호';
+    COMMENT ON COLUMN READGOAL.MEM_NO IS '사용자번호';
+    COMMENT ON COLUMN READGOAL.RG_BOOK IS '목표책수';
+    COMMENT ON COLUMN READGOAL.RG_START IS '시작일';
+    COMMENT ON COLUMN READGOAL.RG_END IS '종료일';
+
+INSERT INTO READGOAL
+            VALUES(
+                    1
+                    , 7
+                    ,55
+                    , SYSDATE-20
+                    , SYSDATE
+                    ); 
+                    

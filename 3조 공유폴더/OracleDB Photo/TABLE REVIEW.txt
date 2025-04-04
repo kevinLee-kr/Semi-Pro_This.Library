@@ -1,0 +1,61 @@
+============================================================리뷰
+    CREATE TABLE REVIEW
+    (
+        MEM_NO      NUMBER PRIMARY KEY,
+        VIEWCOUNT   NUMBER, 
+        LIKES       NUMBER, 
+        ANSWER      VARCHAR2(3000) CONSTRAINT ANS_NN NOT NULL,
+        RATING      NUMBER DEFAULT 1 CONSTRAINT RATING_NN NOT NULL,
+        BOOK_NO     NUMBER,
+        
+        CONSTRAINT MEM_NO_PFK FOREIGN KEY(MEM_NO)
+        REFERENCES MEMBER(MEM_NO)
+    );
+COMMENT ON COLUMN REVIEW.MEM_NO IS '회원번호';
+COMMENT ON COLUMN REVIEW.VIEWCOUNT IS '조회수';
+COMMENT ON COLUMN REVIEW.LIKES IS '좋아요';
+COMMENT ON COLUMN REVIEW.ANSWER IS '답글';
+COMMENT ON COLUMN REVIEW.RATING IS '별점';
+COMMENT ON COLUMN REVIEW.BOOK_NO IS '책 번호';
+INSERT INTO REVIEW(
+                MEM_NO,
+                VIEWCOUNT,
+                LIKES,
+                ANSWER,
+                RATING,
+                BOOK_NO)
+            VALUES(   7
+                    , 7
+                    , 4500
+                    , 'ㄹㅇㅋㅋ'
+                    , 4
+                    , 35
+                    ); 
+ INSERT INTO REVIEW(
+                MEM_NO,
+                VIEWCOUNT,
+                LIKES,
+                ANSWER,
+                RATING,
+                BOOK_NO)
+            VALUES(   8
+                    , 8
+                    , 5100
+                    , 'ㄹㅇㅋㅋ'
+                    , 5
+                    , 355
+                    ); 
+INSERT INTO REVIEW(
+                MEM_NO,
+                VIEWCOUNT,
+                LIKES,
+                ANSWER,
+                RATING,
+                BOOK_NO)
+            VALUES(   9
+                    , 9
+                    , 4990
+                    , 'ㄹㅇㅋㅋ'
+                    , 999
+                    , 99
+                    ); 
